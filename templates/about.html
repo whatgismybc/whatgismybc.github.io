@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+<div class="topnav">
+	<a href="/"> home</a> 
+	<a class ="active" href="{{ url_for('get_about') }}"> about </a> 
+</div>
+
+<div class='container'>
+	<div class="content vertical-center">
+		<h1> Pill-specific information is hard to find on the internet </h1>
+
+		<p> I chose the first birth control pill my doctor recommended. Later, I read <i> This is Your Brain on Birth Control </i>, by Sarah E. Hill. In it was this really helpful table, mapping a hormone that differs across pills to common side effects. After some Googling (too much), I found out that my pill was a second generation contraceptive and that I'd benefit from looking into different generations </p>.
+
+		<p> Where this information comes from: Descriptions of each generation are taken nearly verbatim, minus a few verb conjugations, from the aforementioned book. I got data mapping birth control pills to the type of progestin they include from Drugs.com. Python dictionaries that you can play with (a map from pill name to progestin type, pill name to generic name, and pill name to alternate names) can be found here.  In better formatted text I'll talk about where I got the data, how you can get the data, the book that the descriptions are taken from, and how this is meant to guide conversations with a doctor and is just a place to get started. Also email me if you find birth control pill names that I've missed! </p>
+	</div>
+</div>
+{% endblock %}

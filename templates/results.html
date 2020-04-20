@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class="topnav">
+	<a href="/"> home</a> 
+	<a href="{{ url_for('get_about') }}"> about </a> 
+</div>
+<div class='container'>
+	<div class="content vertical-center">
+		<h1> {{ submitted }} is a {{ generation }} pill. </h1>
+
+		<h2> What does that mean? </h2>
+
+		<p> {{submitted}} is {{ generation_description }}.</p>
+	</div>
+</div>
+{% endblock %}
