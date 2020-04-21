@@ -24,7 +24,7 @@ def get_results():
 	g_name = get_generation(submitted)
 	if g_name:
 		testosterone, progestin, adv, disadv, gen_se = get_generation_desc(g_name, submitted)
-		if testosterone: 
+		if progestin: 
 			return render_template('results.html', submitted=submitted, generation=g_name, testosterone=testosterone, progestin=progestin,
 								   advantages=adv, disadvantages=disadv, side_effects=gen_se)
 	return render_template('no_idea.html', submitted=submitted)

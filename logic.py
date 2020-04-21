@@ -51,8 +51,10 @@ def get_advantages(progestin):
 				  'norgestrel': 'potential benefits in terms of preventing endometriosis',
 				  'desogestrel': 'alleviating menstrual cramps, reduced risk of menstrual migrains, positive effects on lipids, and less weight gain than other oral contraceptives',
 				  'norgestimate': 'being the only FDA-approved pill to help acne and little effect on lipids',
-				  'drosperinone': 'potential reduction in PMS symptoms and acne'}
-	return advantages[progestin]
+				  'drospirenone': 'potential reduction in PMS symptoms and acne'}
+	if progestin in advantages:
+		return advantages[progestin]
+	return None
 
 def get_disadvantages(progestin):
 	disadvantages = {'norethindrone': 'variable effects on acne',
@@ -63,7 +65,9 @@ def get_disadvantages(progestin):
 					 'desogestrel': 'a higher risk of blood clots',
 					 'norgestimate': 'a higher rate of headaches and reduced libido',
 					 'drosperinone': 'an increased risk of blood clots and increase serum potassium levels'}
-	return disadvantages[progestin]
+	if progestin in disadvantages:
+		return disadvantages[progestin]
+	return None
 
 def get_generation_desc(g, submitted):
 	# Only submitted names that are in the database should reach this step
@@ -111,7 +115,7 @@ def get_generation_desc(g, submitted):
 						  					    come with a higher risk of blood clots than second-generation pills do'}
 
 	if 'fourth' in g:	
-		gen_se = fourth_gen_descr_map[progestin]				  					    
+		gen_se = fourth_gen_side_effects[progestin]				  					    
 	else:
 		gen_se = side_effects[g]		
 
