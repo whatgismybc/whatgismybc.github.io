@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    
+<link rel=stylesheet type=text/css href="/static/style.css">
+
+<div class="topnav">
+	<a href="/"> home</a> 
+	<a class ="active" href="/about"> about </a> 
+</div>
+
+<div class='container'>
+	<div class="content vertical-center">
+
+		<div class="text-container">
+			<h1> Pill-specific information is hard to find on the internet. </h1>
+
+			<p> I chose the first birth control pill my doctor recommended. Later, I read <a href="https://www.goodreads.com/en/book/show/43982429"> <i> This is Your Brain on Birth Control </i> </a>, by Sarah E. Hill. In it was a helpful table I wish I'd seen earlier, mapping hormone types to common side effects. After some Googling (too much), I found out that my pill was a second generation contraceptive and that I might benefit from looking into different pills. </p>
+			<h3> Data </h3>
+			<p> Generation-specific side effects come from the book <a href="https://www.goodreads.com/en/book/show/43982429"> <i> This is Your Brain on Birth Control </i> </a> and <a href="https://www.verywellhealth.com/different-progestin-types-906936"> this article </a>. 
+
+			<p> Mappings from contraceptive methods to progestins, generic names, and alternate names were collected from <a href="https://www.drugs.com/condition/contraception.html"> drugs.com</a>. Python dictionaries that you can play with (mappings for pill names to progestins, generic names, and alternate names) can be found <a href="https://github.com/whatgismybc/whatgismybc.github.io"> here</a>. The dataset covers 323 birth control pills.</p>
+			<h3> Limitations </h3>
+			<p> This isn't a replacement for talking to your doctor about contraceptive options (of which the pill is one of many). This is just a place to get started. On top of that, the list is likely not comprehensive - if your pill isn't covered, email me at divyas@mit.edu! </p>
+
+		</div>
+	</div>
+</div>
+
+
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
