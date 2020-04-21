@@ -2,8 +2,12 @@
 import pickle
 import pdb
 
+import os
+import pathlib
+absolute_path = str(pathlib.Path().absolute())
+
 def find_closest_name(submitted):
-	with open('data/progestin.pickle', 'rb') as handle:
+	with open(absolute_path + '/data/progestin.pickle', 'rb') as handle:
 		name_progestin_map = pickle.load(handle)
 	names = name_progestin_map.keys()
 	names = [x.lower() for x in names]
@@ -15,7 +19,7 @@ def find_closest_name(submitted):
 	return "none"
 
 def get_progestin(name):
-	with open('data/progestin.pickle', 'rb') as handle:
+	with open(absolute_path + '/data/progestin.pickle', 'rb') as handle:
 		name_progestin_map = pickle.load(handle)
 	return name_progestin_map[name]
 
