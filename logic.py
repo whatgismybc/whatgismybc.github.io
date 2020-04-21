@@ -5,7 +5,7 @@ import pdb
 import os
 import pathlib
 absolute_path = str(pathlib.Path().absolute())
-
+absolute_path = "/home/whatgismybc/whatgismybc.github.io"
 def find_closest_name(submitted):
 	with open(absolute_path + '/data/progestin.pickle', 'rb') as handle:
 		name_progestin_map = pickle.load(handle)
