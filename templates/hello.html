@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<title>What generation is your birth control</title>
+<div class='container'>
+	<div class="content vertical-center">
+	<h1 class='title'> What generation is your birth control? </h1>
+		<div class='form-container'>
+		    <form action="/results" method="post" novalidate>
+		        {{ form.hidden_tag() }}
+		        <p class='field'> {{ form.pill_name(size=89, class="form__field") }} </p>
+		        <p class='field'>{{ form.submit(class="btn draw-border") }}</p>
+		    </form>
+		</div>
+	</div>
+</div>
+{% endblock %}

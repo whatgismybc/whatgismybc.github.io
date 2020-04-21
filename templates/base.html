@@ -1,0 +1,10 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class="topnav">
+	<a class ="active" href="/"> home</a> 
+	<a href="{{ url_for('get_about') }}"> about </a> 
+</div>
+
+{% endblock %}

@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body>
-    
-    
-<link rel=stylesheet type=text/css href="/static/style.css">
+{% extends 'base.html' %}
+
+{% block content%}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 
 <div class="topnav">
 	<a href="/"> home</a> 
-	<a class ="active" href="/about"> about </a> 
+	<a class ="active" href="{{ url_for('get_about') }}"> about </a> 
 </div>
 
 <div class='container'>
@@ -33,10 +25,4 @@
 		</div>
 	</div>
 </div>
-
-
-    
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </body>
-</html>
+{% endblock %}
