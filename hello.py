@@ -4,7 +4,6 @@ from flask import render_template
 
 from flask import request
 from flask_bootstrap import Bootstrap
-from flask_frozen import Freezer
 
 from forms import bc_form
 from logic import get_generation, get_generation_desc, get_side_effects
@@ -13,7 +12,6 @@ import pdb
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'you-will-never-guess'
 bootstrap = Bootstrap(app)
-freezer = Freezer(app)
 
 @app.route('/')
 def hello_world():
