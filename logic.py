@@ -7,6 +7,7 @@ import pathlib
 #absolute_path = str(pathlib.Path().absolute())
 absolute_path = "/home/whatgismybc/whatgismybc.github.io"
 def find_closest_name(submitted):
+	submitted = submitted.replace('-', '').replace(' ', '')
 	with open(absolute_path + '/data/progestin.pickle', 'rb') as handle:
 		name_progestin_map = pickle.load(handle)
 	names = name_progestin_map.keys()
@@ -14,7 +15,7 @@ def find_closest_name(submitted):
 	submitted = submitted.lower()
 	# TODO: add some sort of logic for typos
 	for name in names:
-		if submitted in name:
+		if submitted in name.replace('-', '').replace(' ', ''):
 			return name 
 	return "none"
 
