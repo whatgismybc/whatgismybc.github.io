@@ -12,7 +12,6 @@ import pdb
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'you-will-never-guess'
 bootstrap = Bootstrap(app)
-freezer = Freezer(app)
 
 @app.route('/')
 def hello_world():
