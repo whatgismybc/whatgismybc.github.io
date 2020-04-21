@@ -22,9 +22,12 @@ def hello_world():
 def get_results():
 	submitted= request.form['pill_name']
 	g_name = get_generation(submitted)
-	testosterone, progestin, adv, disadv, gen_se = get_generation_desc(g_name, submitted)
-	return render_template('results.html', submitted=submitted, generation=g_name, testosterone=testosterone, progestin=progestin,
-						   advantages=adv, disadvantages=disadv, side_effects=gen_se)
+	if g_name:
+		testosterone, progestin, adv, disadv, gen_se = get_generation_desc(g_name, submitted)
+		if testosterone: 
+			return render_template('results.html', submitted=submitted, generation=g_name, testosterone=testosterone, progestin=progestin,
+								   advantages=adv, disadvantages=disadv, side_effects=gen_se)
+	return render_template('no_idea.html', submitted=submitted)
 
 @app.route('/about')
 def get_about():
@@ -32,5 +35,4 @@ def get_about():
 
 
 if __name__ == '__main__':
-	freezer.freeze()
 	app.run()

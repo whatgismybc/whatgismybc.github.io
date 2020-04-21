@@ -4,7 +4,7 @@ import pdb
 
 import os
 import pathlib
-absolute_path = str(pathlib.Path().absolute())
+#absolute_path = str(pathlib.Path().absolute())
 absolute_path = "/home/whatgismybc/whatgismybc.github.io"
 def find_closest_name(submitted):
 	with open(absolute_path + '/data/progestin.pickle', 'rb') as handle:
@@ -66,8 +66,13 @@ def get_disadvantages(progestin):
 	return disadvantages[progestin]
 
 def get_generation_desc(g, submitted):
+	# Only submitted names that are in the database should reach this step
 	name = find_closest_name(submitted)
 	progestin = get_progestin(name) 
+	# TODO: logic for progestins that are none
+	if progestin == "none":
+		return None, None, None, None, None
+
 	# get testosterone derivation
 	fourth_gen_testosterone = {"dienogest": "derived from testosterone",
 							 "drospirenone": "the only one that is not derived from testosterone, but rather from a diuretic called spironolactone"}
