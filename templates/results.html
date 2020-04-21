@@ -8,11 +8,22 @@
 </div>
 <div class='container'>
 	<div class="content vertical-center">
-		<h1> {{ submitted }} is a {{ generation }} pill. </h1>
+		<div class = 'text-container'>
+			<h1> <span class="submitted">{{ submitted }}</span> is a {{ generation }} pill. </h1>
 
-		<h2> What does that mean? </h2>
+			<div class="text-container">
+				<h3> What does that mean? </h3>
+				<p> The progestin in {{submitted}} is <b> {{progestin}} </b> and it is {{ testosterone }}.</p>
 
-		<p> {{submitted}} is {{ generation_description }}.</p>
+				<p> Advantages of this progestin include {{ advantages }}.</p>
+				<p> Disadvantages of this progestin include {{ disadvantages }}. </p>
+
+				<p> Pills in this generation {{ side_effects }}.</p>
+
+				<!-- <h3> What are each generation's common side effects? </h3>
+				<p> If you're interested in different generations, here are some common brands from each generation: </p> -->
+			</div>
+		</div>
 	</div>
 </div>
 {% endblock %}

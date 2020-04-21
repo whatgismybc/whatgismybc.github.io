@@ -21,10 +21,9 @@ def hello_world():
 def get_results():
 	submitted= request.form['pill_name']
 	g_name = get_generation(submitted)
-	g_descr = get_generation_desc(g_name, submitted)
-	g_side_effects = get_side_effects(g_name)
-	return render_template('results.html', submitted=submitted, generation=g_name, generation_description=g_descr, 
-						   generation_side_effects=g_side_effects)
+	testosterone, progestin, adv, disadv, gen_se = get_generation_desc(g_name, submitted)
+	return render_template('results.html', submitted=submitted, generation=g_name, testosterone=testosterone, progestin=progestin,
+						   advantages=adv, disadvantages=disadv, side_effects=gen_se)
 
 @app.route('/about')
 def get_about():
