@@ -4,8 +4,8 @@ import pdb
 
 import os
 import pathlib
-#absolute_path = str(pathlib.Path().absolute())
-absolute_path = "/home/whatgismybc/whatgismybc.github.io"
+absolute_path = str(pathlib.Path().absolute())
+#absolute_path = "/home/whatgismybc/whatgismybc.github.io"
 def find_closest_name(submitted):
 	submitted = submitted.replace('-', '').replace(' ', '')
 	with open(absolute_path + '/data/progestin.pickle', 'rb') as handle:
@@ -35,6 +35,8 @@ def get_progestin_generation(progestin_name):
 def get_generation(submitted):
 	# see if name is in the name_progestin map
 	# go from progestin map to generation
+	if submitted.strip(' ') == "":
+		return None
 	name = find_closest_name(submitted)
 	g_words = None
 	if name != "none":
