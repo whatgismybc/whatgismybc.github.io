@@ -9,7 +9,7 @@
 		<div class='form-container'>
 		    <form action="/results" method="post" novalidate>
 		        {{ form.hidden_tag() }}
-		        <p class='field'> {{ form.pill_name(size=89, class="form__field") }} </p>
+		        <p class='field'> {{ form.pill_name(size=89, class="form__field", placeholder="enter your pill name here", onfocus="this.placeholder = ''") }} </p>
 		        <p class='field'>{{ form.submit(class="btn draw-border") }}</p>
 		    </form>
 		</div>
