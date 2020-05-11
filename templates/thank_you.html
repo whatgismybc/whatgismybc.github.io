@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class="topnav">
+	<a href="/"> home</a> 
+	<a href="{{ url_for('get_about') }}"> about </a> 
+</div>
+<div class='container'>
+	<div class="content vertical-center">
+		<div class = 'form-container'>
+			<h1> <span class="submitted">Thank you</span> for your submission. </h1>
+			<p> If you'd like to hear what we find, leave your email below. </p>
+		    <form action="/write_email" method="post" novalidate>
+				<p class='field'> {{ form.email(size=89, class="form__field") }} </p>
+		        <p class='field'>{{ form.submit(class="btn draw-border") }}</p>			
+	    	</form>
+	    	{% if formdone %}
+	    		<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+	    	{% endif %}
+		</div>
+	</div>
+</div>
+{% endblock %}

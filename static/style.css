@@ -16,6 +16,7 @@ body {
 	font-family: orpheuspro, serif;
 	font-style: normal;;
 	text-align: center;
+  padding-bottom: 50px;
 }
 
 h1 {
@@ -150,4 +151,55 @@ body {
 
 .text-container {
 	text-align: left;
+}
+
+.letter-slider {
+  padding-bottom: 0.25em;
+  margin: 1px auto;
+  position: relative;
+  width:  min(100%, 250px);
+  display: inline-block;
+}
+.letter-slider::after{
+  content: '';
+  display: table; width: 100%; clear: both;
+}
+.letter-slider input[type="radio"] {
+  display: none;
+}
+.letter-slider label {
+  color: #bebebe;
+  font-size: 14pt;
+  float: left;
+  width: 20%;
+  text-align: center;
+  transition: color .5s;
+  text-shadow: -1px -1px 0 black;
+}
+.letter-slider label:hover {
+  text-decoration: underline;
+}
+.letter-slider input:checked + label {
+  color: white;
+}
+
+.question {
+  text-align: center;
+}
+
+.slider-container {
+  width: 100%; 
+  /*TODO: add constraint so that its the min of the largest size I'd like*/
+  position: relative;
+}
+
+
+.slider-container-element {
+  display:inline-block;
+  margin: 1em auto;
+  padding-bottom: 0.25em;
+  position: relative;
+  vertical-align: top;
+  width: 90px;
+  text-align: center;
 }

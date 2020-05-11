@@ -19,6 +19,82 @@
 				<p> Disadvantages of this progestin include {{ disadvantages }}. </p>
 
 				<p> Pills in this generation {{ side_effects }}.</p>
+				<br>
+				<h3 style="text-align:center"> We're collecting data on how happy you are with this pill. </h3>
+				<h5 style="text-align:center"> A rating of "1" means you feel negatively and "5" means you feel positively. </h5> 
+
+			    <form action="/results_thank_you" method="post" novalidate>
+			    	<span hidden> {{ form.pill_name(value=submitted) }} </span>
+
+
+					<div class="question">
+	   					How do you feel about this pill? <br>
+	   					<div class="slider-container">
+							<div class="letter-slider">
+				                {% for subfield in form.happiness %}
+								    {{ subfield(id= loop.index|string + "1") }}
+								    <label for={{ loop.index|string + "1" }}> {{loop.index}} </label>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+
+					<div class="question">
+	   					How has this pill affected your mood? <br>
+	   					<div class="slider-container">
+							<div class="letter-slider">
+				                {% for subfield in form.mood %}
+								    {{ subfield(id= loop.index|string + "2") }}
+								    <label for={{ loop.index|string + "2" }}> {{loop.index}} </label>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+
+					<div class="question">
+	   					How has this pill affected your libido? <br>
+	   					<div class="slider-container">
+							<div class="letter-slider">
+				                {% for subfield in form.libido %}
+								    {{ subfield(id= loop.index|string + "3") }}
+								    <label for={{ loop.index|string + "3" }}> {{loop.index}} </label>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+
+					<div class="question">
+	   					How has this pill affected your energy? <br>
+	   					<div class="slider-container">
+							<div class="letter-slider">
+				                {% for subfield in form.energy %}
+								    {{ subfield(id= loop.index|string + "4") }}
+								    <label for={{ loop.index|string + "4" }}> {{loop.index}} </label>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+
+					<div class="question">
+	   					How has this pill affected your outlook on life? <br>
+	   					<div class="slider-container">
+							<div class="letter-slider">
+				                {% for subfield in form.outlook %}
+								    {{ subfield(id= loop.index|string + "5") }}
+								    <label for={{ loop.index|string + "5" }}> {{loop.index}} </label>
+								{% endfor %}
+							</div>
+						</div>
+							               {{ form.submit(class="btn draw-border") }}
+
+					</div>
+	            </form>
+				<!-- We need five smileys here for how happy people are with their pills -->
+				<!-- How would you say the pill affected the following? -->
+				<!-- Mood? Very Negatively Affected, Negatively affected, No Effect, Positively affected, Very Positively Affected -->
+				<!-- Libido? -->
+				<!-- Energy level? --> 
+				<!-- Outlook on life? --> 
 
 				<!-- <h3> What are each generation's common side effects? </h3>
 				<p> If you're interested in different generations, here are some common brands from each generation: </p> -->
