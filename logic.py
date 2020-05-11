@@ -4,8 +4,8 @@ import pdb
 
 import os
 import pathlib
-absolute_path = str(pathlib.Path().absolute())
-#absolute_path = "/home/whatgismybc/whatgismybc.github.io"
+#absolute_path = str(pathlib.Path().absolute())
+absolute_path = "/home/whatgismybc/whatgismybc.github.io"
 def find_closest_name(submitted):
 	submitted = submitted.replace('-', '').replace(' ', '')
 	with open(absolute_path + '/data/progestin.pickle', 'rb') as handle:
