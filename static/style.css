@@ -213,6 +213,6 @@ body {
 
 @media screen and (max-width: 500px) {
     .form__field {
-      font-size: 15px;
+      font-size: 20px;
     }
 }
